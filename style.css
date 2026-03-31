@@ -12,13 +12,13 @@
     --hero-text-color: white;
     --invalid-color: #eb0000;
     --large-font-size: 20px;
-    --small-font-size: 10px;
+    --small-font-size: 11px;
     --medium-font-weight: 500;
 }
 
 @font-face {
     font-family: "Norse Bold";
-    src: url("https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf") format("opentype");
+    src: url("assets/fonts/Norse-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -133,7 +133,7 @@
     text-transform: uppercase;
     font-size: var(--small-font-size);
     font-weight: var(--medium-font-weight);
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     display: block;
 }
 
@@ -143,7 +143,7 @@
 }
 
 .field input {
-    height: 1.4rem;
+    height: 1.6rem;
     width: 100%;
     padding: 6px 6px;
     border: 1px solid #e5e7eb;
