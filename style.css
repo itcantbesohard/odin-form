@@ -163,11 +163,11 @@
     box-shadow: 0 0 2px 0px var(--invalid-color);
 }
 
-.form-card .info {
+.form-card .info p {
     margin-top: 20px;
-    margin-bottom: 0px;
     font-size: var(--small-font-size);
     color: var(--invalid-color);
+    margin-bottom: 0px;
 }
 
 .cta {
@@ -179,6 +179,7 @@
     font-weight: var(--medium-font-weight);
     text-decoration: none;
 }
+
 
 .btn {
     background-color: var(--main-theme-color);
