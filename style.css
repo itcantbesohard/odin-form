@@ -10,7 +10,7 @@
     --main-theme-color: #596D48;
     --text-color: black;
     --hero-text-color: white;
-    --invalid-color: lab(53.23% 80.11 67.22);
+    --invalid-color: #eb0000;
     --large-font-size: 20px;
     --small-font-size: 10px;
     --medium-font-weight: 500;
@@ -117,16 +117,16 @@
 .form-sign-up {
     display: flex;
     flex-wrap: wrap;
-    max-width: 500px;
     row-gap: 18px;
     column-gap: 48px;
 }
 
 .field {
     display: flex;
+    width: 40%;
+    min-width: 200px;
     flex-direction: column;
-    max-width: 320px;
-    gap: 2px;
+    gap: 3px;
 }
 
 .field label {
@@ -134,19 +134,44 @@
     font-size: var(--small-font-size);
     font-weight: var(--medium-font-weight);
     letter-spacing: 0.2em;
+    display: block;
+}
+
+.field .required:after {
+    content: "*";
+    color: var(--invalid-color);
 }
 
 .field input {
-    max-width: 300px;
     height: 1.4rem;
+    width: 100%;
     padding: 6px 6px;
     border: 1px solid #e5e7eb;
     border-radius: 0.2rem;
+}
 
+.field input:focus {
+    /* outline: 2px solid var(--main-theme-color); */
+    outline: none;
+    border-color: var(--main-theme-color);
+    box-shadow: 0 0 2px 0px var(--main-theme-color);
+}
+
+.field input:invalid {
+    outline: none;
+    border-color: var(--invalid-color);
+    box-shadow: 0 0 2px 0px var(--invalid-color);
+}
+
+.form-card .info {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: var(--small-font-size);
+    color: var(--invalid-color);
 }
 
 .cta {
-    padding: 20px 40px;
+    padding: 30px 40px;
 }
 
 .cta a {
@@ -169,4 +194,24 @@
 .btn:hover {
     opacity: 90%;
     cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .page {
+        flex-direction: column;
+    }
+
+    .hero {
+        width: 100%;
+        min-height: 35vh;
+    }
+
+    .field {
+        width: 100%;
+    }
+
+    .description {
+        margin-top: 20px;
+    }
 }
